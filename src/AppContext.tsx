@@ -1,18 +1,6 @@
 import { createContext, useContext, useReducer, ReactNode } from 'react';
 import { User } from './api/authenticate';
 
-type State = {
-  user: undefined | User;
-  permissions: undefined | string[];
-  loading: boolean;
-};
-
-const initialState: State = {
-  user: undefined,
-  permissions: undefined,
-  loading: false,
-};
-
 type Action =
   | {
       type: 'authenticate';
